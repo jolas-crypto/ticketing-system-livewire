@@ -13,12 +13,6 @@ class LoginComponent extends Component
 
     public function save()
     {
-        dd('test');
-        // Post::create([
-        //     'title' => $this->title,
-        //     'content' => $this->content,
-        // ]);
- 
-        // return redirect()->to('/posts');
+        //
     }
 }
