@@ -2,25 +2,18 @@
 
 namespace App\Livewire;
 
+use App\Livewire\Forms\RegisterSaveForm;
 use App\Models\User;
 use Livewire\Component;
 
 class RegisterComponent extends Component
 {
-    public $first_name = '';
-    public $last_name = '';
-    public $email = '';
+    public RegisterSaveForm $registerSaveForm;
 
     public function save()
     {
-        $validated = $this->validate([
-            'first_name' => 'required',
-            'last_name' => 'required',
-            'email' => 'required|unique:users,email'
-        ]);
-
-        User::create($validated);
-
+        $this->registerSaveForm->store();
+        
         session()->flash('status', 'Successfully Saved.');
 
         return redirect()->to('/register');
