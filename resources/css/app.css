@@ -9,4 +9,7 @@
     .sub-header-class {
         @apply text-3xl font-bold tracking-tight text-white
     }
+    .admin-nav {
+        @apply rounded-md px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-700 hover:text-white
+    }
 }
