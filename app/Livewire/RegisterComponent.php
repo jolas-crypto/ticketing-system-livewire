@@ -3,12 +3,21 @@
 namespace App\Livewire;
 
 use App\Livewire\Forms\RegisterSaveForm;
-use App\Models\User;
 use Livewire\Component;
+use Livewire\WithFileUploads;
 
 class RegisterComponent extends Component
 {
+    use WithFileUploads;
+    
     public RegisterSaveForm $registerSaveForm;
+
+    public $type = [
+        'Employee', 
+        'Primary Support', 
+        'Secondary Support', 
+        'Immediate Superior'
+    ];
 
     public function save()
     {

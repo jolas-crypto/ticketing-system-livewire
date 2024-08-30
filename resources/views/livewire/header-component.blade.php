@@ -8,13 +8,25 @@
 							<img class="h-8 w-8" src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=500" alt="Your Company">
 						</div>
 						<div class="hidden md:block">
-							<div class="ml-10 flex items-baseline space-x-4">
-								<a href="{{ route('dashboard') }}" class="link-class">Dashboard</a>
+							<div x-data="{ active: '{{ Route::currentRouteName() }}' }" class="ml-10 flex items-baseline space-x-4">
+								<a href="{{ route('dashboard') }}"
+									:class="{ 'link-class-active': active === 'dashboard' }"
+									class="link-class">
+									Dashboard
+								</a>
 								<a href="#" class="link-class">Create</a>
 								<a href="{{ route('ticket-list') }}" class="link-class">List</a>
 								<a href="#" class="link-class">Notification</a>
-								<a href="{{ route('register') }}" class="link-class">Register</a>
-								<a href="{{ route('admin-setting') }}" class="link-class">Admin</a>
+								<a href="{{ route('register') }}" 
+									:class="{ 'link-class-active': active === 'register' }"
+									class="link-class">
+									Register
+								</a>
+								<a href="{{ route('admin-setting') }}" 
+									:class="{ 'link-class-active': active === 'admin-setting' }"
+									class="link-class">
+									Admin
+								</a>
 							</div>
 						</div>
 					</div>

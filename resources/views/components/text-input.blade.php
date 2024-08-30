@@ -8,8 +8,10 @@
 <div>
     <div>
         <label 
-		for="{{ $attributes->whereStartsWith('wire:model')->first() }}" 
-		class="block text-sm font-medium leading-6 text-gray-900">{{ $label }}</label>
+			for="{{ $attributes->whereStartsWith('wire:model')->first() }}" 
+			class="block text-sm font-medium leading-6 text-gray-900">
+			{{ $label }}
+		</label>
         <div class="relative mt-2 rounded-md shadow-sm">
 			<input 
 			{{ $attributes->whereStartsWith('wire:model') }}
