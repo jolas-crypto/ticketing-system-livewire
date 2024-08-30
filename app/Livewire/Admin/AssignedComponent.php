@@ -9,6 +9,6 @@ class AssignedComponent extends Component
     public function render()
     {
         return view('livewire.admin.assigned-component')
-            ->layout('layouts.app');
+        ->layout('layouts.app');
     }
 }

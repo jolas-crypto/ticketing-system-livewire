@@ -18,6 +18,9 @@ return new class extends Migration
             $table->string('city');
             $table->string('state_province');
             $table->string('zip_code', 5);
+            $table->text('about')->nullable();
+            $table->string('type');
+            $table->string('image_path')->nullable();
             $table->boolean('status')->default(true);
             $table->unsignedBigInteger('registered_by')->default(0);
             $table->timestamps();

@@ -6,10 +6,40 @@
     .link-class {
         @apply rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white
     }
+    .link-class-active {
+        @apply rounded-md px-3 py-2 text-sm font-medium bg-gray-700 text-white
+    }
     .sub-header-class {
         @apply text-3xl font-bold tracking-tight text-white
     }
     .admin-nav {
         @apply rounded-md px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-700 hover:text-white
+    }
+    .admin-nav-active {
+        @apply rounded-md px-3 py-2 text-sm font-medium bg-gray-700 text-white
+    }
+    .button-add {
+        @apply block rounded-md bg-indigo-600 px-3 py-2 text-center text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600
+    }
+    .button-save {
+        @apply rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600
+    }
+    .button-cancel {
+        @apply text-sm font-semibold leading-6 text-gray-900
+    }
+    .select-input {
+        @apply mt-2 block w-full rounded-md border-0 py-2 pl-3 pr-10 text-gray-900 ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-indigo-600 sm:text-sm sm:leading-6
+    }
+    .label {
+        @apply block text-sm font-medium leading-6 text-gray-900
+    }
+    .textarea-class {
+        @apply block w-full rounded-md border-0 py-1.5 px-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6
+    }
+    .table-tbody {
+        @apply whitespace-nowrap px-3 py-4 text-sm text-gray-500
+    }
+    .table-tbody-span {
+        @apply inline-flex items-center rounded-md bg-green-50 px-2 py-1 text-xs font-medium text-green-700 ring-1 ring-inset ring-green-600/20
     }
 }
