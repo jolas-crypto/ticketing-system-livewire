@@ -2,11 +2,11 @@
 
 namespace App\Livewire\Forms;
 
-use App\Models\IssueClassification;
+use App\Models\IssueType;
 use Livewire\Attributes\Validate;
 use Livewire\Form;
 
-class IssueClassificationSaveForm extends Form
+class IssueTypeSaveForm extends Form
 {
     #[Validate('required')]
     public $code = '';
@@ -23,7 +23,7 @@ class IssueClassificationSaveForm extends Form
     {
         $this->validate();
 
-        IssueClassification::create([
+        IssueType::create([
             'code' => $this->code,
             'name' => $this->name,
             'description' => $this->description,

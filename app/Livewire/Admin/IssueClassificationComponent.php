@@ -10,8 +10,6 @@ class IssueClassificationComponent extends Component
 {
     use WithPagination;
      
-    public $issueClassification;
-    
     public $tableHeaders = [
         'Code', 
         'Name', 
@@ -19,16 +17,21 @@ class IssueClassificationComponent extends Component
         'Status'
     ];
 
-    public function mount()
+    public $query = '';
+ 
+    public function search()
     {
-        $this->issueClassification = IssueClassification::all();
+        $this->resetPage();
     }
 
     public function render()
     {
+        $issueClassification = IssueClassification::where('name', 'like', '%' . $this->query . '%')
+        ->orWhere('description', 'like', '%' . $this->query . '%')
+        ->paginate(10);
+
         return view('livewire.admin.issue-classification-component', [
-            'issueClassificationLists' => $this->issueClassification,
-            'issueClassification' => IssueClassification::paginate(2),
+            'issueClassification' => $issueClassification
         ])->layout('layouts.app');
     }
 }

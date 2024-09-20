@@ -17,8 +17,8 @@
         class="select-input"
         placeholder="{{ $placeholder }}" 
         >
-        @foreach ($items as $item)
-            <option value="{{ $item }}">{{ $item }}</option>     
+        @foreach ($items as $key => $item)
+            <option value="{{ $key }}">{{ $item }}</option>     
         @endforeach
     </select>
 </div>
