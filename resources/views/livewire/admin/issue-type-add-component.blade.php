@@ -7,10 +7,10 @@
                 <p class="mt-2 text-sm text-gray-700">This table will categorize the issues, for example, by severity or priority.</p>
             </div>
             <div class="mt-4 sm:ml-16 sm:mt-0 sm:flex-none">
-                <a href="{{ route('issue-classification') }}"
+                <a href="{{ route('issue-type') }}"
                     wire:navigate
                     class="button-add">
-                    Back to List Issue Classification
+                    Back to List Issue Type
                 </a>
             </div>
         </div>
@@ -21,7 +21,7 @@
                         <div class="mt-10 grid grid-cols-1 gap-x-6 gap-y-6 sm:grid-cols-6">
                             <div class="sm:col-span-3">
                                 <x-text-input
-                                wire:model="issueClassificationSaveForm.code"
+                                wire:model="issueTypeSaveForm.code"
                                 type="text"
                                 label="Code"
                                 :required="false"
@@ -31,7 +31,7 @@
                             </div>
                             <div class="sm:col-span-3">
                                 <x-text-input
-                                wire:model="issueClassificationSaveForm.name"
+                                wire:model="issueTypeSaveForm.name"
                                 type="text"
                                 label="Name"
                                 :required="false"
@@ -41,7 +41,7 @@
                             </div>
                             <div class="col-span-full">
                                 <x-textarea 
-                                wire:model="issueClassificationSaveForm.description"
+                                wire:model="issueTypeSaveForm.description"
                                 label="Description"
                                 name="description"
                                 placeholder="Description"
@@ -49,7 +49,7 @@
                             </div>
                             <div class="sm:col-span-2">
                                 <x-select-input 
-                                wire:model="issueClassificationSaveForm.status"
+                                wire:model="issueTypeSaveForm.status"
                                 label="Status"
                                 :items="$status"
                                 placeholder="Status"
@@ -58,9 +58,14 @@
                         </div>
                     </div>
                 </div>
-                <div class="mt-6 flex items-center justify-end gap-x-6">
+                <div class="mt-6 flex items-center justify-end gap-x-4">
                     <a href="{{ route('issue-type') }}" wire:navigate class="button-cancel">Cancel</a>
-                    <button type="submit" class="button-save">Save</button>
+                    <button 
+                    type="submit" 
+                    class="button-save"
+                    >
+                    Save
+                </button>
                 </div>
             </form>
         </div>
